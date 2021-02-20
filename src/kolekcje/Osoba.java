@@ -54,7 +54,10 @@ public class Osoba extends Istota {
     }
     public String toString()
     {
-        return getImie() + " " + nazwisko + " " + wzrost + " " + dataUrodzenia.toString();
+        if (dataUrodzenia != null)
+          return getImie() + " " + nazwisko + " " + wzrost + " " + dataUrodzenia;
+        else
+          return getImie() + " " + nazwisko + " " + wzrost;
     }
     @Override
     public String getTyp()
